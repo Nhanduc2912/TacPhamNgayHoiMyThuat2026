@@ -24,31 +24,73 @@
       </div>
     </header>
 
+    <div class="lang-toggle-wrap">
+      <div class="lang-toggle">
+        <button id="btn-vi" class="lang-btn active" onclick="setLanguage('vi')">VN</button>
+        <button id="btn-en" class="lang-btn" onclick="setLanguage('en')">EN</button>
+      </div>
+    </div>
+
     <div class="artwork-img-wrap">
       <img src="assets/AnhTranh/image%20copy%2062.png" alt="Trái tim của biển.">
     </div>
 
     <div class="title-area">
-      <h1 class="artwork-title">Trái tim của biển.</h1>
+      <h1 class="artwork-title">
+        <span class="lang-vi">Trái tim của biển.</span>
+        <span class="lang-en">The Heart of the Sea</span>
+      </h1>
       <div class="artwork-author">Nguyễn Thị Dư Dư</div>
       <div class="title-divider"></div>
     </div>
 
     <table class="info-table">
       <tbody>
-        <tr><td class="label">Chất liệu</td><td class="value">Giấy Dó</td></tr>
-        <tr><td class="label">Kích thước</td><td class="value">60cm x 80cm</td></tr>
-        <tr><td class="label">Năm sáng tác</td><td class="value">2026</td></tr>
-        <tr><td class="label">Số điện thoại tác giả</td><td class="value">0777483306</td></tr>
-        <tr><td class="label">Giá bán</td><td class="value">20.000.000 VNĐ</td></tr>
+        <tr>
+          <td class="label"><span class="lang-vi">Chất liệu</span><span class="lang-en">Medium</span></td>
+          <td class="value"><span class="lang-vi">Giấy Dó</span><span class="lang-en">Dó paper</span></td>
+        </tr>
+        <tr>
+          <td class="label"><span class="lang-vi">Kích thước</span><span class="lang-en">Size</span></td>
+          <td class="value">60cm x 80cm</td>
+        </tr>
+        <tr>
+          <td class="label"><span class="lang-vi">Năm sáng tác</span><span class="lang-en">Year</span></td>
+          <td class="value">2026</td>
+        </tr>
+        <tr>
+          <td class="label"><span class="lang-vi">Số điện thoại tác giả</span><span class="lang-en">Contact</span></td>
+          <td class="value">0777483306</td>
+        </tr>
+        <tr>
+          <td class="label"><span class="lang-vi">Giá bán</span><span class="lang-en">Price</span></td>
+          <td class="value"><span class="lang-vi">20.000.000 VNĐ</span><span class="lang-en">VND 20,000,000</span></td>
+        </tr>
       </tbody>
     </table>
 
   <section class="desc-section">
-    <div class="desc-label">Giới thiệu tác phẩm</div>
-    <p class="desc-text">Với chất liệu giấy Dó, sản xuất thủ công 100%. <br>Tại các Trung tâm lưu trữ Quốc gia đánh giá có tuổi thọ cao nhất, có tư liệu tính về   độ bền hơn 500 năm. <br>Kết hợp chất liều Truyền thống Việt Nam với phong cách hiện đại , tác giả xin gửi đến thông điệp:<br>&quot; Mong ai cũng trân quý Biển, chăm sóc Biển, vì ở đó, tiềm ẩn những món quà quý giá vô tận mà thiên nhiên ban tặng ,để chúng ta sẽ được hạnh phúc, thịnh vượng cho bạn, cho gia đình và nhân loại trên toàn cầu</p>
+    <div class="desc-label">
+      <span class="lang-vi">Giới thiệu tác phẩm</span>
+      <span class="lang-en">Artwork Statement</span>
+    </div>
+    <p class="desc-text lang-vi">Với chất liệu giấy Dó, sản xuất thủ công 100%. <br>Tại các Trung tâm lưu trữ Quốc gia đánh giá có tuổi thọ cao nhất, có tư liệu tính về   độ bền hơn 500 năm. <br>Kết hợp chất liều Truyền thống Việt Nam với phong cách hiện đại , tác giả xin gửi đến thông điệp:<br>&quot; Mong ai cũng trân quý Biển, chăm sóc Biển, vì ở đó, tiềm ẩn những món quà quý giá vô tận mà thiên nhiên ban tặng ,để chúng ta sẽ được hạnh phúc, thịnh vượng cho bạn, cho gia đình và nhân loại trên toàn cầu</p>
+    <p class="desc-text lang-en">This artwork is created on Dó paper, a traditional Vietnamese handmade paper. According to the National Archives Centres of Vietnam, Dó paper is highly durable, with documented longevity of over 500 years.<br>Dó paper is known for its delicate and fluid absorption of colour, allowing layers of pigment to blend, resonate and permeate one another in a unique way. Its natural properties also make it less vulnerable to damage caused by insects.<br>The artist takes great pride in this traditional material, which was once used by Vietnamese kings and lords for imperial writings and official decrees. By combining a traditional Vietnamese material with a contemporary artistic approach, the artist wishes to convey the message:<br>“May we all cherish the sea and care for it, for within the sea lie countless precious gifts bestowed upon us by nature. Through this care and respect, may happiness and prosperity come to ourselves, our families, and humanity across the world.”</p>
   </section>
 
   </div>
+  <script>
+    function setLanguage(lang) {
+      if (lang === 'en') {
+        document.body.classList.add('is-en');
+        document.getElementById('btn-vi').classList.remove('active');
+        document.getElementById('btn-en').classList.add('active');
+      } else {
+        document.body.classList.remove('is-en');
+        document.getElementById('btn-en').classList.remove('active');
+        document.getElementById('btn-vi').classList.add('active');
+      }
+    }
+  </script>
 </body>
 </html>
